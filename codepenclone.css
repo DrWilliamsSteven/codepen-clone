@@ -1,0 +1,30 @@
+
+#toolbar {
+background-color: black;
+color: white;
+width: 100%;
+border-bottom: 2px solid grey;
+}
+
+button {
+background-color: grey;
+color: white;
+float: right;
+corner-radius: 4px;
+}
+
+.settings {
+float: left;
+
+}
+
+.menubar {
+background-color: black;
+color: white;
+border-bottom: 2px solid grey;
+width: 300px;
+}
+
+
+
+
