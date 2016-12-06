@@ -3,14 +3,63 @@
 background-color: black;
 color: white;
 width: 100%;
+height: 70px;
 border-bottom: 2px solid grey;
+}
+
+#LHStoolbar {
+width: 300px;
+height: 80px;
+float: left;
+}
+
+#logo {
+width: 50px;
+height: 50px;
+margin: 10px;
+float: left;
+}
+
+#penTitle {
+float: left;
+margin-top: 10px;
+
+}
+
+#pencil {
+width: 20px;
+height: 20px;
+margin: 10px;
+}
+
+#LHStoolbar p {
+margin-top: 0px;
+float: left;
+line-height: 10%;
+position: relative;
+padding-top: 0px
+}
+
+#RHStoolbar {
+width: 400px;
+height: 80px;
+float: right;
 }
 
 button {
 background-color: grey;
 color: white;
-float: right;
+float: left;
+height: 30px;
 corner-radius: 4px;
+margin: 20px 5px;
+
+}
+
+#profilelogo {
+width: 50px;
+height: 50px;
+margin: 10px;
 }
 
 .settings {
