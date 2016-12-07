@@ -85,13 +85,8 @@ button {
 }
 
 .menubar img {
-<<<<<<< HEAD
-		height: 18px;
-		width: 18px;
-=======
 		height: 10px;
 		width: 10px;
->>>>>>> origin/master
 		margin: 0;
 }
 
@@ -104,13 +99,8 @@ button {
 }
 
 .boxHeading {
-width: 100px;
-float: left;
-}
-
-.boxHeading {
-width: 100px;
-float: left;
+	width: 100px;
+	float: left;
 }
 
 .boxsize {
@@ -122,28 +112,21 @@ float: left;
 
 
 .panel h3 {
-position: relative;
-padding-top: 10px;	
-font-size: 125%;
-margin: 0 5px 5px 5px;		
+		position: relative;
+		padding-top: 10px;	
+		font-size: 125%;
+		margin: 0 5px 5px 5px;		
 
 }
 
 textarea {		
 		background-color: white;
-width: 100%;
-<<<<<<< HEAD
-resize: none;	
-
-	
+		width: 100%;
+		resize: none;		
 }
 
 #outputbox {
 		padding: 10px;
-=======
-resize: none;		
-	
->>>>>>> origin/master
 }
 
 
