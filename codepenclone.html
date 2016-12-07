@@ -3,11 +3,13 @@
 <head>
 	<title>Codepen clone</title>
 
-<!-- Latest compiled and minified CSS 	-->
+<!-- Latest compiled and minified CSS 		-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="codepenclone.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- js script link?	
 	<script type="text/javascript" src="codepenclone.js"></script>
+	-->
 </head>
 
 <body>
@@ -34,7 +36,8 @@
 	<div class='panel' id='htmlbox'>
 		<div class='menubar' id='htmlmenubar'>
 		<button class='settings'><img src='xxx'></button>
-		<h3>HTML<button class='boxsize'><img src='xxx'></button></h3> <!-- Max/minimise box area -->		 
+		<h3 class='boxHeading'>HTML</h3> 
+		<button class='boxsize'><img src='xxx'></button><!-- Max/minimise box area -->		 
 		</div>
 		<textarea class='input' id='htmlinputbox'>Hello world</textarea>
 	</div>
@@ -42,7 +45,8 @@
 	<div class='panel' id='cssbox'>
 		<div class='menubar' id='cssmenubar'>
 		<button class='settings'><img src='xxx'></button>
-		<h3>CSS<button class='boxsize'><img src='xxx'></button></h3> <!-- Max/minimise box area -->		 
+		<h3 class='boxHeading'>CSS</h3> <!-- Max/minimise box area -->
+		<button class='boxsize'><img src='xxx'></button>		
 		</div>
 		<textarea class='input' id='cssinputbox'>	</textarea>
 	</div>
@@ -50,7 +54,8 @@
 	<div class='panel' id='jsbox'>
 		<div class='menubar' id='JSmenubar'>
 		<button class='settings'><img src='xxx'></button>
-		<h3>JavaScript<button class='boxsize'><img src='xxx'></button></h3>  <!-- Max/minimise box area -->		
+		<h3 class='boxHeading'>JavaScript</h3>  <!-- Max/minimise box area -->		
+		<button class='boxsize'><img src='xxx'></button>
 		</div>
 		<textarea class='input' id='jsinputbox'></textarea>		
 	</div>
@@ -61,6 +66,21 @@
 
 	<div id='footer'>
 	</div>
+	
+	<script type='text/javascript'>
+	
+			$('.panel').height($(window).height() -  $('#toolbar').height() - $('.menubar').height() - 65); 	//
+			$('textarea').height($('.panel').height() -  $('.menubar').height() -10); 	
+
+			$('.panel').width($(window).width() / 4 - 5 );
+
+			$('iframe').contents().find('html').html($('#htmlinputbox').val()  );
+
+			$('textarea').on('change keyup paste', function() {
+				$('iframe').contents().find('html').html($('#htmlinputbox').val()  );
+			});
+	
+	</script>
 
 
 </body>
