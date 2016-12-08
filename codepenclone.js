@@ -6,16 +6,49 @@ $(document).ready(function() {
 					
 				document.getElementById('outputbox').contentWindow.eval($('#jsinputbox').val() );	
 			}
+			
+			var startHeight = $(window).height();
+			var startWidth = $(window).width();
 
-			$('.panel').height($(window).height() -  $('#toolbar').height() - $('.menubar').height() - 65); 	
-			$('textarea').height($('.panel').height() -  $('.menubar').height() -10); 	
+			function horizontalLayout() {
+			$('.panel').addClass('panelHorizontal');
+						
+			$('.panel').height( startHeight -  $('#toolbar').height() ); 	
+			$('textarea').height($('.panel').height() -  $('.menubar').height() - 30); 	
+			$('#outputbox').height(startHeight -  $('#toolbar').height() - 20 );	
 
-			$('.panel').width($(window).width() / 4 - 10 );
+			$('.panel').width( startWidth / 4 - 14);					
+			}			
+			
+			
+			function stackedLayout() {
+					$('.panel').removeClass('panelHorizontal');
+					
+					$('.panel').height( ( startHeight -  $('#toolbar').height() ) / 3 );
+					$('textarea').height($('.panel').height() -  $('.menubar').height() - 30); 
+					$('.panel').width( startWidth / 2 - 2 );	
+					$('#outputbox').width( startWidth / 2 - 32);	
+					$('#outputbox').height( startHeight -  $('#toolbar').height() - 10 );	
+			}
+			
 
-			updateOutput()
+			horizontalLayout();
+			updateOutput();
+			
+			$('#changeView').click( function() {
+					if (  $('.panel').hasClass('panelHorizontal') ) {
+						stackedLayout();				
+					} else {
+						horizontalLayout();	
+					}			
+			});
 
 			$('textarea').on('change keyup paste', function() {
 				updateOutput()
 			});			
+			
+			$('#run').click( function() {
+				updateOutput()
+			});
 
 });
