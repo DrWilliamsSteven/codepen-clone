@@ -52,7 +52,20 @@
 		float: right;
 }
 
-button {
+#RHStoolbar p {
+		color: white;
+		float: left;
+		margin: 25px 15px;
+		height: 30px;
+		border: 2px solid white;
+}
+
+#RHStoolbar a {
+		color: white;
+		text-decoration: none;
+}
+
+button { 	/*  Not needed? */
 		background-color: grey;
 		color: white;
 		float: left;
@@ -82,12 +95,6 @@ button {
 		border-bottom: 2px solid grey;
 		height: 40px;	
 		margin-top: 0;
-}
-
-.menubar img {
-		height: 10px;
-		width: 10px;
-		margin: 0;
 }
 
 .settings {
