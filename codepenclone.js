@@ -7,28 +7,31 @@ $(document).ready(function() {
 				document.getElementById('outputbox').contentWindow.eval($('#jsinputbox').val() );	
 			}
 			
-			var startHeight = $(window).height();
+			var startHeight = $(document).height();
 			var startWidth = $(window).width();
 
 			function horizontalLayout() {
+						
 			$('.panel').addClass('panelHorizontal');
 						
-			$('.panel').height( startHeight -  $('#toolbar').height() ); 	
+			$('.panel').height( startHeight -  $('#toolbar').height() - 15); 	
 			$('textarea').height($('.panel').height() -  $('.menubar').height() - 30); 	
-			$('#outputbox').height(startHeight -  $('#toolbar').height() - 20 );	
+			$('#outputbox').height(startHeight -  $('#toolbar').height() - 35 );	
 
-			$('.panel').width( startWidth / 4 - 14);					
+			$('.panel').width( startWidth / 4 - 14);		
+
 			}			
 			
 			
 			function stackedLayout() {
 					$('.panel').removeClass('panelHorizontal');
 					
-					$('.panel').height( ( startHeight -  $('#toolbar').height() ) / 3 );
-					$('textarea').height($('.panel').height() -  $('.menubar').height() - 30); 
+					$('.panel').height( ( startHeight -  $('#toolbar').height() ) / 3 - 6);
+					$('textarea').height($('.panel').height() -  $('.menubar').height() - 50); 
 					$('.panel').width( startWidth / 2 - 2 );	
-					$('#outputbox').width( startWidth / 2 - 32);	
-					$('#outputbox').height( startHeight -  $('#toolbar').height() - 10 );	
+					$('#outputbox').width( startWidth / 2 - 34);	
+					$('#outputbox').height( startHeight -  $('#toolbar').height() - 30 );	
+
 			}
 			
 
@@ -50,5 +53,21 @@ $(document).ready(function() {
 			$('#run').click( function() {
 				updateOutput()
 			});
+			
+						
+    $(document).on('click', function(e) {
+        if (e.target.id === 'pencil') {
+            $('#penTitle').attr('contenteditable', 'true');
+        }  else if (e.target.id === 'penTitle' && e.target.attributes){
+		
+		
+		}
+		
+		
+		else {
+           $('#penTitle').attr('contenteditable', 'false');
+			}
+
+		});
 
 });
