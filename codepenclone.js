@@ -56,15 +56,9 @@ $(document).ready(function() {
 			
 						
     $(document).on('click', function(e) {
-        if (e.target.id === 'pencil') {
-            $('#penTitle').attr('contenteditable', 'true');
-        }  else if (e.target.id === 'penTitle' && e.target.attributes){
-		
-		
-		}
-		
-		
-		else {
+        if (e.target.id === 'pencil' || e.target.id === 'penTitle' ) {
+            $('#penTitle').attr('contenteditable', 'true');       
+		}	else {
            $('#penTitle').attr('contenteditable', 'false');
 			}
 
