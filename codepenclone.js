@@ -73,5 +73,11 @@ $(document).ready(function() {
 		});
 		
 		
+		$(".panel-left").resizable({
+   handles: "e",
+   resizeHeight: false
+ });
+		
+		
 
 });
