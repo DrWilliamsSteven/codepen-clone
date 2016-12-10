@@ -9,7 +9,7 @@
 }
 
 #LHStoolbar {
-		width: 300px;
+		width: 500px;
 		height: 70px;
 		float: left;
 }
@@ -32,12 +32,18 @@
 		height: 50px;
 		margin: 0;
 		padding-bottom: 15px;
+		float: left;
 		
 }
 
-#LHStoolbar p {
+#LHStoolbarText {
+width: 420px;
+float: left;
+}
+
+#LHStoolbarText p {
 		margin-top: 0px;
-		float: left;
+		clear: left;
 		line-height: 10%;
 		position: relative;
 		padding-top: 0px;
@@ -55,7 +61,8 @@
 		float: right;
 }
 
-#RHStoolbar p {
+#RHStoolbar button {
+		background-color: black;
 		color: white;
 		float: left;
 		margin: 20px 5px;
